@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <meta charset="utf-8" />
+    <title>DIGItario Recetario Digital</title>
+    <meta
+      name="viewport"
+      id="myViewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://digitario.com.ar" />
+    <meta property="og:site_name" content="DIGItario Recetario Digital" />
+    <meta property="og:title" content="Recetas DIGItario" />
+    <meta
+      property="og:description"
+      content="Receta_12345678_Medicamento.pdf"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image"
+      content="https://alt.digitario.com.ar/icon.png"
+    />
+  </header>
+  <body>
+    <script>
+      const getMobileOS = () => {
+        const ua = navigator.userAgent
+        if (/android/i.test(ua)) {
+          return "Android"
+        }
+        else if ((/iPad|iPhone|iPod/.test(ua)) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+          return "iOS"
+        }
+        return "Other"
+      };
+      const os = getMobileOS();
+      console.log("os: " + os);  
+      if (os==="Android") window.location.href="https://docs.google.com/viewer?url=https://alt.digitario.com.ar/rdt/test.pdf";
+      else window.location.href="https://alt.digitario.com.ar/rdt/test.pdf";
+    </script>
+  </body>
+</html>
